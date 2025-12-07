@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTONEW.CapaPresentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,28 @@ namespace PROYECTONEW
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FrmGestionClientes frm = new FrmGestionClientes();
+            frm.ShowDialog();
+
         }
     }
 }

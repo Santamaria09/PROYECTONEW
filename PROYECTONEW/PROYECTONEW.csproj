@@ -46,6 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\ClientesDAL.cs" />
+    <Compile Include="CapaDatos\Conexion.cs" />
+    <Compile Include="CapaDatos\EstadoDAL.cs" />
+    <Compile Include="CapaDatos\MetodoPagoDAL.cs" />
+    <Compile Include="CapaDatos\PesoDAL.cs" />
+    <Compile Include="CapaDatos\ProductoDAL.cs" />
+    <Compile Include="CapaEntidades\Cliente.cs" />
+    <Compile Include="CapaEntidades\EstadoActual.cs" />
+    <Compile Include="CapaEntidades\MetodoPago.cs" />
+    <Compile Include="CapaEntidades\Peso.cs" />
+    <Compile Include="CapaEntidades\Producto.cs" />
+    <Compile Include="CapaNegocio\ClienteBLL.cs" />
+    <Compile Include="CapaPresentacion\FrmClienteAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmClienteAE.Designer.cs">
+      <DependentUpon>FrmClienteAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmEpresaAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmEpresaAE.Designer.cs">
+      <DependentUpon>FrmEpresaAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestionClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestionClientes.Designer.cs">
+      <DependentUpon>FrmGestionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestionEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestionEmpresas.Designer.cs">
+      <DependentUpon>FrmGestionEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestonProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmGestonProductos.Designer.cs">
+      <DependentUpon>FrmGestonProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmRegistrarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmRegistrarCompra.Designer.cs">
+      <DependentUpon>FrmRegistrarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +102,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapaPresentacion\FrmClienteAE.resx">
+      <DependentUpon>FrmClienteAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmEpresaAE.resx">
+      <DependentUpon>FrmEpresaAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmGestionClientes.resx">
+      <DependentUpon>FrmGestionClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmGestionEmpresas.resx">
+      <DependentUpon>FrmGestionEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmGestonProductos.resx">
+      <DependentUpon>FrmGestonProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmRegistrarCompra.resx">
+      <DependentUpon>FrmRegistrarCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +145,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_man_avatar_person_people_thinking_about_shopping_shopping_ideas_icon_225149.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_man_avatar_person_people_thinking_about_shopping_shopping_ideas_icon_225149 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery_courier_man_people_avatar_shipping_icon_225164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment_method_dataphone_bill_money_credit_card_icon_225163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mall_building_sopping_center_commerce_icon_225151.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online_store_ecommerce_website_shopping_marketplace_icon_225169.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipment_logistics_hub_automation_warehouse_box_icon_225145.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_icon-icons.com_74429 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_icon-icons.com_74429 %281%291.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papelera-de-reciclaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telefono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clavo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
