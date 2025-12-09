@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROYECTONEW.CapaDatos
+namespace PROYECTONEW.CapaEntidades
 {
-    internal class RolDALcs
+    public class Rol
     {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
     }
 }

@@ -10,56 +10,48 @@ using System.Windows.Forms;
 
 namespace PROYECTONEW.CapaNegocio
 {
-    public class ClienteBLL
+    public class EmpresaBLL
     {
-        ClientesDAL dal = new ClientesDAL();
-
+        EmpresaDAL dall = new EmpresaDAL();
         public DataTable Listar()
         {
-            return dal.Listar();
+            return dall.Listar();
 
         }
-
-        public int Guardar(Cliente c)
+        public int Guardar( Empresa e)
         {
-            if (string.IsNullOrWhiteSpace(c.Nombre))
-                throw new Exception("El Nombre del Cliente es obligatorio");
+            if (string.IsNullOrWhiteSpace(e.Nombre))
+                throw new Exception("El nombre del Empresa es obligatorio");
 
-            if (string.IsNullOrWhiteSpace(c.Telefono) || c.Telefono.Length != 8)
+            if (string.IsNullOrWhiteSpace(e.TelefonoEmpresa) || e.TelefonoEmpresa.Length != 8)
                 throw new Exception("El teléfono debe contener exactamente 8 dígitos.");
 
-            if (c.Id == 0)
+            if (e.Id == 0)
             {
-
-
-                MessageBox.Show("Cliente registrado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return dal.Insertar(c);
+                MessageBox.Show("La empresa ha registrado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return dall.Insertar(e);
             }
             else
             {
-                dal.Actualizar(c);
+                dall.Actualizar(e);
                 MessageBox.Show("El registro ha sido actualizado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return c.Id;
+                return e.Id;
 
             }
-        }
 
-        public bool Eliminar(int Id)
+        }
+        public bool Eliminar(int id)
         {
-            return dal.Eliminar(Id);
+            return dall.Eliminar(id);
 
             MessageBox.Show("Registro eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-
         }
-
-        public DataTable Buscar(string Filtro)
+        public DataTable Buscar(string filtro)
         {
-            return dal.Buscar(Filtro);
+            return dall.Buscar(filtro);
 
         }
-
-      
     }
-
 }
+

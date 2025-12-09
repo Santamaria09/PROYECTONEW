@@ -1,6 +1,6 @@
 ﻿namespace PROYECTONEW
 {
-    partial class Form1
+    partial class FrmMenuPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGCLIENTES = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnV = new System.Windows.Forms.Button();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnCompra = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnEmpresas = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -55,21 +56,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGCLIENTES);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Location = new System.Drawing.Point(49, 248);
+            this.groupBox1.Location = new System.Drawing.Point(49, 278);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(225, 154);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // btnGCLIENTES
+            // 
+            this.btnGCLIENTES.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGCLIENTES.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
+            this.btnGCLIENTES.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGCLIENTES.Location = new System.Drawing.Point(122, 64);
+            this.btnGCLIENTES.Name = "btnGCLIENTES";
+            this.btnGCLIENTES.Size = new System.Drawing.Size(90, 25);
+            this.btnGCLIENTES.TabIndex = 8;
+            this.btnGCLIENTES.Text = "CLIENTES";
+            this.btnGCLIENTES.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGCLIENTES.UseVisualStyleBackColor = true;
+            this.btnGCLIENTES.Click += new System.EventHandler(this.btnGCLIENTES_Click);
             // 
             // pictureBox1
             // 
@@ -84,27 +100,28 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnV);
+            this.groupBox2.Controls.Add(this.btnVentas);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(171, 47);
+            this.groupBox2.Location = new System.Drawing.Point(325, 77);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(225, 154);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ventas";
             // 
-            // btnV
+            // btnVentas
             // 
-            this.btnV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnV.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
-            this.btnV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnV.Location = new System.Drawing.Point(120, 73);
-            this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(90, 25);
-            this.btnV.TabIndex = 6;
-            this.btnV.Text = "Agregar";
-            this.btnV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnV.UseVisualStyleBackColor = true;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentas.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
+            this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.Location = new System.Drawing.Point(120, 73);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Size = new System.Drawing.Size(90, 25);
+            this.btnVentas.TabIndex = 6;
+            this.btnVentas.Text = "Agregar";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // pictureBox2
             // 
@@ -119,41 +136,28 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.btnProductos);
             this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Location = new System.Drawing.Point(308, 248);
+            this.groupBox3.Location = new System.Drawing.Point(308, 278);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(242, 154);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
             // 
-            // button12
+            // btnProductos
             // 
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Image = global::PROYECTONEW.Properties.Resources.comprobado;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(129, 64);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(107, 25);
-            this.button12.TabIndex = 7;
-            this.button12.Text = "PRODUCTOS";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(122, 73);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(90, 25);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "CLIENTES";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnProductos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Image = global::PROYECTONEW.Properties.Resources.comprobado;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(129, 64);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(107, 25);
+            this.btnProductos.TabIndex = 7;
+            this.btnProductos.Text = "PRODUCTOS";
+            this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // pictureBox3
             // 
@@ -169,7 +173,7 @@
             // 
             this.groupBox4.Controls.Add(this.btnCompra);
             this.groupBox4.Controls.Add(this.pictureBox4);
-            this.groupBox4.Location = new System.Drawing.Point(472, 47);
+            this.groupBox4.Location = new System.Drawing.Point(579, 77);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(225, 154);
             this.groupBox4.TabIndex = 4;
@@ -199,58 +203,30 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton2,
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(848, 25);
-            this.toolStrip1.TabIndex = 5;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button10);
+            this.groupBox5.Controls.Add(this.btnEmpresas);
             this.groupBox5.Controls.Add(this.pictureBox5);
-            this.groupBox5.Location = new System.Drawing.Point(579, 248);
+            this.groupBox5.Location = new System.Drawing.Point(579, 278);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(225, 154);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Empresas";
             // 
-            // button10
+            // btnEmpresas
             // 
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(120, 64);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(99, 25);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "EMPRESAS";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnEmpresas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpresas.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
+            this.btnEmpresas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpresas.Location = new System.Drawing.Point(120, 64);
+            this.btnEmpresas.Name = "btnEmpresas";
+            this.btnEmpresas.Size = new System.Drawing.Size(99, 25);
+            this.btnEmpresas.TabIndex = 8;
+            this.btnEmpresas.Text = "EMPRESAS";
+            this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmpresas.UseVisualStyleBackColor = true;
+            this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
             // 
             // pictureBox5
             // 
@@ -262,20 +238,78 @@
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
             // 
-            // Form1
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnCambiarContraseña);
+            this.groupBox6.Controls.Add(this.btnUsuarios);
+            this.groupBox6.Controls.Add(this.pictureBox6);
+            this.groupBox6.Location = new System.Drawing.Point(49, 77);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(236, 154);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Ventas";
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarContraseña.Image = global::PROYECTONEW.Properties.Resources.comprobado;
+            this.btnCambiarContraseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(120, 77);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(113, 49);
+            this.btnCambiarContraseña.TabIndex = 8;
+            this.btnCambiarContraseña.Text = "   CAMBIAR\r\n  CONTRASEÑA";
+            this.btnCambiarContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Image = global::PROYECTONEW.Properties.Resources.boton_agregar;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(120, 46);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(105, 25);
+            this.btnUsuarios.TabIndex = 6;
+            this.btnUsuarios.Text = "    USUARIOS";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.ErrorImage = null;
+            this.pictureBox6.Image = global::PROYECTONEW.Properties.Resources.delivery_courier_man_people_avatar_shipping_icon_225164;
+            this.pictureBox6.Location = new System.Drawing.Point(14, 30);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 110);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(12, 20);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 8;
+            this.lblUsuario.Text = "label2";
+            // 
+            // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 503);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "FrmMenuPrincipal";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -284,10 +318,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,17 +336,19 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.Button btnV;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnCompra;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnEmpresas;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnCambiarContraseña;
+        private System.Windows.Forms.Button btnGCLIENTES;
     }
 }
 

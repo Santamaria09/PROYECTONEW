@@ -1,5 +1,6 @@
 ﻿using PROYECTONEW.CapaEntidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace PROYECTONEW.CapaDatos
 {
-    public class PesoDAL
+    internal class RolDAL
     {
-        public static List<Peso> Listar()
+        public static List<Rol> ListarRol()
         {
-            List<Peso> Lista = new List<Peso>();
+            List<Rol> rl = new List<Rol>();
             using (SqlConnection con = new SqlConnection(Conexion.Cadena))
             {
-                string sql = "SELECT * FROM UnidadPeso";
+                string sql = "SELECT * FROM Rol";
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     con.Open();
@@ -23,17 +24,17 @@ namespace PROYECTONEW.CapaDatos
                     {
                         while (dr.Read())
                         {
-                            Lista.Add(new Peso
+                            rl.Add(new Rol
                             {
                                 Id = Convert.ToInt32(dr["Id"]),
                                 Nombre = dr["Nombre"].ToString(),
+
                             });
                         }
                     }
                 }
             }
-            return Lista;
-
+            return rl;
         }
     }
 }

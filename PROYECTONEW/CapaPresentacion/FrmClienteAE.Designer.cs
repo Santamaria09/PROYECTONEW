@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 491);
+            this.ClientSize = new System.Drawing.Size(490, 491);
             this.Controls.Add(this.chkC);
             this.Controls.Add(this.txtTC);
             this.Controls.Add(this.txtDC);
@@ -174,6 +174,7 @@
             this.Controls.Add(this.btnGC);
             this.Controls.Add(this.txtNC);
             this.Controls.Add(this.label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmClienteAE";
             this.Text = "FrmClienteAE";
             this.Load += new System.EventHandler(this.FrmClienteAE_Load);
