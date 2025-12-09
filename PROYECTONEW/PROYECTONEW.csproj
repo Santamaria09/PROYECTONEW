@@ -55,12 +55,14 @@
     <Compile Include="CapaDatos\ProductoDAL.cs" />
     <Compile Include="CapaDatos\RolDAL.cs" />
     <Compile Include="CapaDatos\UsuarioDAL.cs" />
+    <Compile Include="CapaDatos\VentaDAL.cs" />
     <Compile Include="CapaEntidades\Cliente.cs" />
     <Compile Include="CapaEntidades\Compra.cs" />
     <Compile Include="CapaEntidades\CompraItem.cs" />
     <Compile Include="CapaEntidades\Empresa.cs" />
     <Compile Include="CapaEntidades\EstadoActual.cs" />
     <Compile Include="CapaEntidades\MetodoPago.cs" />
+    <Compile Include="CapaEntidades\Operaciones.cs" />
     <Compile Include="CapaEntidades\Peso.cs" />
     <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\Rol.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="CapaNegocio\ClienteBLL.cs" />
     <Compile Include="CapaNegocio\RolBLL.cs" />
     <Compile Include="CapaNegocio\UsuarioBLL.cs" />
+    <Compile Include="CapaNegocio\VentaBLL.cs" />
     <Compile Include="CapaPresentacion\FrmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>

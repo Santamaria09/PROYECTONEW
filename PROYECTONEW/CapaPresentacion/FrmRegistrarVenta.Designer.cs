@@ -36,6 +36,8 @@
             this.cboC = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAgregarP = new System.Windows.Forms.Button();
+            this.cboActualiza = new System.Windows.Forms.ComboBox();
             this.chkNoA = new System.Windows.Forms.CheckBox();
             this.chkAplica = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,8 +48,7 @@
             this.dvgBP = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.cboActualiza = new System.Windows.Forms.ComboBox();
-            this.btnAgregarP = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDp)).BeginInit();
@@ -125,6 +126,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.btnAgregarP);
             this.panel2.Controls.Add(this.cboActualiza);
             this.panel2.Controls.Add(this.chkNoA);
@@ -137,8 +139,28 @@
             this.panel2.Controls.Add(this.dvgBP);
             this.panel2.Location = new System.Drawing.Point(56, 125);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(967, 343);
+            this.panel2.Size = new System.Drawing.Size(967, 373);
             this.panel2.TabIndex = 1;
+            // 
+            // btnAgregarP
+            // 
+            this.btnAgregarP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarP.Location = new System.Drawing.Point(315, 248);
+            this.btnAgregarP.Name = "btnAgregarP";
+            this.btnAgregarP.Size = new System.Drawing.Size(128, 39);
+            this.btnAgregarP.TabIndex = 31;
+            this.btnAgregarP.Text = "Agregar Detalle";
+            this.btnAgregarP.UseVisualStyleBackColor = true;
+            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
+            // 
+            // cboActualiza
+            // 
+            this.cboActualiza.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboActualiza.FormattingEnabled = true;
+            this.cboActualiza.Location = new System.Drawing.Point(149, 16);
+            this.cboActualiza.Name = "cboActualiza";
+            this.cboActualiza.Size = new System.Drawing.Size(255, 29);
+            this.cboActualiza.TabIndex = 24;
             // 
             // chkNoA
             // 
@@ -176,7 +198,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 316);
+            this.label5.Location = new System.Drawing.Point(71, 329);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 27;
@@ -241,32 +263,24 @@
             this.button5.TabIndex = 27;
             this.button5.Text = "Volver";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // cboActualiza
+            // btnRegistrar
             // 
-            this.cboActualiza.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboActualiza.FormattingEnabled = true;
-            this.cboActualiza.Location = new System.Drawing.Point(149, 16);
-            this.cboActualiza.Name = "cboActualiza";
-            this.cboActualiza.Size = new System.Drawing.Size(255, 29);
-            this.cboActualiza.TabIndex = 24;
-            // 
-            // btnAgregarP
-            // 
-            this.btnAgregarP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarP.Location = new System.Drawing.Point(315, 248);
-            this.btnAgregarP.Name = "btnAgregarP";
-            this.btnAgregarP.Size = new System.Drawing.Size(128, 39);
-            this.btnAgregarP.TabIndex = 31;
-            this.btnAgregarP.Text = "Agregar Detalle";
-            this.btnAgregarP.UseVisualStyleBackColor = true;
-            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(310, 320);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(133, 39);
+            this.btnRegistrar.TabIndex = 32;
+            this.btnRegistrar.Text = "Registrar Venta";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // FrmRegistrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 492);
+            this.ClientSize = new System.Drawing.Size(1066, 526);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -308,5 +322,6 @@
         private System.Windows.Forms.CheckBox chkAplica;
         private System.Windows.Forms.ComboBox cboActualiza;
         private System.Windows.Forms.Button btnAgregarP;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }

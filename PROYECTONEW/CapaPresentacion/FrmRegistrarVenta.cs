@@ -1,4 +1,6 @@
 ﻿using PROYECTONEW.CapaDatos;
+using PROYECTONEW.CapaEntidades;
+using PROYECTONEW.CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,22 +97,20 @@ namespace PROYECTONEW.CapaPresentacion
             dvgDp.Columns.Add(colSub);
             dvgDp.ReadOnly = false;
 
-            DataGridViewTextBoxColumn colTotal = new DataGridViewTextBoxColumn();
-            colTotal.Name = "Total";
-            colTotal.HeaderText = "Total";
-            dvgDp.Columns.Add(colTotal);
 
             //No editable
             dvgDp.Columns["SubTotal"].ReadOnly = true;
             dvgDp.Columns["PrecioUnitario"].ReadOnly = true;
             dvgDp.Columns["NombreProducto"].ReadOnly = true;
             dvgDp.Columns["Id_Producto"].ReadOnly = true;
+            dvgDp.Columns["EsSubsidio"].ReadOnly = true;
 
             dvgDp.Columns["Cantidad"].ReadOnly = false;
         }
 
         private void dvgBP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
+            btnAgregarP_Click(sender, e);
         }
 
         private void RecalcularTotal()
@@ -180,27 +180,108 @@ namespace PROYECTONEW.CapaPresentacion
             decimal Precio = Convert.ToDecimal(row.Cells["Precio"].Value);
 
             int Cantidad = 1;
-            decimal SubTotal = Precio;
+            bool Subsidio = chkAplica.Checked;
+            decimal SubTotal = (Precio * Cantidad) - (Subsidio ? 12 : 0);
 
-            if (chkAplica.Checked)
+           
+            if (Subsidio)
             {
-                SubTotal = Precio * 12; // Aplicar descuento
+                SubTotal = Precio - 12;
                 if (SubTotal < 0) SubTotal = 0;
             }
-            else
-            {
-                SubTotal = Precio;
-            }
 
-            decimal Total = SubTotal * Cantidad;
-
-            dvgBP.Rows.Add(
-                    Id_Producto, Nombre, Cantidad, Precio, SubTotal, Total);
+            dvgDp.Rows.Add(
+                     Id_Producto, Nombre, Cantidad, Precio, Subsidio, SubTotal);
 
             RecalcularTotal();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dvgDp.Rows.Count == 0)
+                {
+                    MessageBox.Show("La venta no tiene productos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                //Crear la venta
+                Venta venta = new Venta
+                {
+                    Fecha = dtpT.Value,
+                    MontoTotal = ObtenerTotalVenta(),
+                    Id_MetodoPago = Convert.ToInt32(cboT.SelectedValue),
+                    Id_Cliente = Convert.ToInt32(cboC.SelectedValue),
+                    Id_Usuario = SesionActual.IdUsuario
+
+
+                };
+
+                //Lista de detalles
+                List<VentaItem> detalles = new List<VentaItem>();
+                foreach (DataGridViewRow row in dvgDp.Rows)
+                {
+                    detalles.Add(new VentaItem()
+                    {
+                        Id_Producto = Convert.ToInt32(row.Cells["Id_Producto"].Value),
+                        Cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value),
+                        PrecioUnitario = Convert.ToDecimal(row.Cells["PrecioUnitario"].Value),
+                        EsSubsidio = Convert.ToBoolean(row.Cells["EsSubsidio"].Value),
+                        SubTotal = Convert.ToDecimal(row.Cells["SubTotal"].Value)
+                    });
+                }
+
+                //Validar BLL
+                var validacion = VentaBLL.ValidarVenta(venta, detalles);
+                if (!validacion.Exito)
+                {
+                    MessageBox.Show(validacion.Mensaje, "Error de validacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
+
+                //Guardar
+                var resultado = VentaDAL.RegistrarVenta(venta, detalles);
+                if (resultado.Exito)
+                {
+                    MessageBox.Show(resultado.Mensaje, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarCampos();
+
+                }
+                else
+                {
+                    MessageBox.Show(resultado.Mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado:" + ex.Message);
+            }
+        }
+        private decimal ObtenerTotalVenta()
+        {
+            decimal Total = 0;
+
+            foreach (DataGridViewRow row in dvgDp.Rows)
+                Total += Convert.ToDecimal(row.Cells["SubTotal"].Value);
+
+            return Total;
+        }
+
+        private void LimpiarCampos()
+        {
+            dvgDp.Rows.Clear();
+            label5.Text = "Total: $0.00";
+            CargarProductos(0);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
-    }
+    
     
     
 }

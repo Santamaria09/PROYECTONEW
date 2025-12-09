@@ -9,7 +9,7 @@ namespace PROYECTONEW.CapaEntidades
     public class Venta
     {
         public int Id { get; set; }
-        public decimal Total { get; set; }
+        public decimal MontoTotal { get; set; }
         public int Id_MetodoPago { get; set; }
         public DateTime Fecha { get; set; }
         public int Id_Cliente { get; set; }
