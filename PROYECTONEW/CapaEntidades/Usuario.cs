@@ -8,7 +8,7 @@ namespace PROYECTONEW.CapaEntidades
 {
     public class Usuario
     {
-        public int IdUsuario { get; set; }
+        public int Id { get; set; }
         public string NombreUsuario { get; set; }
         public string ClaveHash { get; set; }
         public int Id_Rol { get; set; }
@@ -17,7 +17,7 @@ namespace PROYECTONEW.CapaEntidades
         //método para cuando cerremos sesión, borra los datos guardados.
         public void Cerrar()
         {
-            this.IdUsuario = 0;
+            this.Id = 0;
             this.NombreUsuario = null;
             this.Id_Rol = 0;
             this.ClaveHash = null;

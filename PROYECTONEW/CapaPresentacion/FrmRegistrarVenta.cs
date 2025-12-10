@@ -32,11 +32,11 @@ namespace PROYECTONEW.CapaPresentacion
             cboT.DisplayMember = "Nombre";
             cboT.ValueMember = "Id";
 
-          
+
             //Fecha
             dtpT.Value = DateTime.Now;
             CargarEstadofiltro();
-            CargarProductos(0);
+            
 
             //Columnas
             ConfigurarTablaDetalle();
@@ -49,12 +49,8 @@ namespace PROYECTONEW.CapaPresentacion
             cboActualiza.SelectedIndex = -1;
         }
 
-        private void CargarProductos(int Id)
-        {
-            dvgBP.DataSource = ProductoDAL.ListarPorEstado(Id);
-            dvgBP.ClearSelection();
-            
-        }
+       
+
 
         private void ConfigurarTablaDetalle()
         {
@@ -109,7 +105,7 @@ namespace PROYECTONEW.CapaPresentacion
         }
 
         private void dvgBP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
             btnAgregarP_Click(sender, e);
         }
 
@@ -172,23 +168,26 @@ namespace PROYECTONEW.CapaPresentacion
                 MessageBox.Show("Seleccione un producto");
                 return;
             }
+            dvgDp.EndEdit();
 
             DataGridViewRow row = dvgBP.SelectedRows[0];
 
             int Id_Producto = Convert.ToInt32(row.Cells["Id"].Value);
             string Nombre = row.Cells["Nombre"].Value.ToString();
             decimal Precio = Convert.ToDecimal(row.Cells["Precio"].Value);
+            
 
             int Cantidad = 1;
             bool Subsidio = chkAplica.Checked;
-            decimal SubTotal = (Precio * Cantidad) - (Subsidio ? 12 : 0);
-
-           
+            decimal PrecioFinal = Precio;
             if (Subsidio)
             {
-                SubTotal = Precio - 12;
-                if (SubTotal < 0) SubTotal = 0;
+                PrecioFinal = Precio - 12;
+
             }
+            decimal SubTotal = PrecioFinal * Cantidad;
+
+
 
             dvgDp.Rows.Add(
                      Id_Producto, Nombre, Cantidad, Precio, Subsidio, SubTotal);
@@ -213,7 +212,7 @@ namespace PROYECTONEW.CapaPresentacion
                     MontoTotal = ObtenerTotalVenta(),
                     Id_MetodoPago = Convert.ToInt32(cboT.SelectedValue),
                     Id_Cliente = Convert.ToInt32(cboC.SelectedValue),
-                    Id_Usuario = SesionActual.IdUsuario
+                    
 
 
                 };
@@ -222,6 +221,7 @@ namespace PROYECTONEW.CapaPresentacion
                 List<VentaItem> detalles = new List<VentaItem>();
                 foreach (DataGridViewRow row in dvgDp.Rows)
                 {
+                    
                     detalles.Add(new VentaItem()
                     {
                         Id_Producto = Convert.ToInt32(row.Cells["Id_Producto"].Value),
@@ -273,12 +273,24 @@ namespace PROYECTONEW.CapaPresentacion
         {
             dvgDp.Rows.Clear();
             label5.Text = "Total: $0.00";
-            CargarProductos(0);
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cboActualiza_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboActualiza.SelectedValue == null) return;
+            if (!(cboActualiza.SelectedValue is int)) return;
+
+            Id = Convert.ToInt32(cboActualiza.SelectedValue);
+
+            dvgBP.DataSource = ProductoDAL.ListarPorEstado(Id);
+            dvgBP.ClearSelection();
+            
         }
     }
     

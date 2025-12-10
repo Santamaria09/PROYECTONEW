@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDC = new System.Windows.Forms.Button();
-            this.btnVC = new System.Windows.Forms.Button();
             this.btnAC = new System.Windows.Forms.Button();
             this.txtBC = new System.Windows.Forms.TextBox();
             this.btnEC = new System.Windows.Forms.Button();
@@ -69,17 +68,6 @@
             this.btnDC.Text = "ELIMINAR";
             this.btnDC.UseVisualStyleBackColor = true;
             this.btnDC.Click += new System.EventHandler(this.btnDC_Click);
-            // 
-            // btnVC
-            // 
-            this.btnVC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVC.Location = new System.Drawing.Point(595, 26);
-            this.btnVC.Name = "btnVC";
-            this.btnVC.Size = new System.Drawing.Size(75, 29);
-            this.btnVC.TabIndex = 7;
-            this.btnVC.Text = "Volver";
-            this.btnVC.UseVisualStyleBackColor = true;
-            this.btnVC.Click += new System.EventHandler(this.btnVC_Click);
             // 
             // btnAC
             // 
@@ -132,11 +120,10 @@
             this.Controls.Add(this.btnEC);
             this.Controls.Add(this.txtBC);
             this.Controls.Add(this.btnAC);
-            this.Controls.Add(this.btnVC);
             this.Controls.Add(this.btnDC);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmGestionClientes";
             this.Text = "FrmGestionClientes";
             this.Load += new System.EventHandler(this.FrmGestionClientes_Load);
@@ -150,7 +137,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDC;
-        private System.Windows.Forms.Button btnVC;
         private System.Windows.Forms.Button btnAC;
         private System.Windows.Forms.TextBox txtBC;
         private System.Windows.Forms.Button btnEC;

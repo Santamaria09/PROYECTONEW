@@ -92,7 +92,7 @@
             // btnEE
             // 
             this.btnEE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEE.Location = new System.Drawing.Point(209, 460);
+            this.btnEE.Location = new System.Drawing.Point(199, 460);
             this.btnEE.Name = "btnEE";
             this.btnEE.Size = new System.Drawing.Size(105, 36);
             this.btnEE.TabIndex = 17;

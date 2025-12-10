@@ -37,7 +37,7 @@ namespace PROYECTONEW.CapaPresentacion
         {
             try
             {
-                int id = SesionActual.IdUsuario;
+                int id = SesionActual.Id;
                 if (id == 0) throw new Exception("No hay sesión activa.");
 
                 // Verificar clave actual

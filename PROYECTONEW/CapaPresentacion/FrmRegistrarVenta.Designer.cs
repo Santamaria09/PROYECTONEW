@@ -36,6 +36,8 @@
             this.cboC = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnAgregarP = new System.Windows.Forms.Button();
             this.cboActualiza = new System.Windows.Forms.ComboBox();
             this.chkNoA = new System.Windows.Forms.CheckBox();
@@ -47,8 +49,6 @@
             this.dvgDp = new System.Windows.Forms.DataGridView();
             this.dvgBP = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDp)).BeginInit();
@@ -72,15 +72,15 @@
             // 
             this.cboT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboT.FormattingEnabled = true;
-            this.cboT.Location = new System.Drawing.Point(481, 22);
+            this.cboT.Location = new System.Drawing.Point(461, 19);
             this.cboT.Name = "cboT";
-            this.cboT.Size = new System.Drawing.Size(175, 29);
+            this.cboT.Size = new System.Drawing.Size(143, 29);
             this.cboT.TabIndex = 23;
             // 
             // dtpT
             // 
             this.dtpT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpT.Location = new System.Drawing.Point(757, 22);
+            this.dtpT.Location = new System.Drawing.Point(752, 22);
             this.dtpT.Name = "dtpT";
             this.dtpT.Size = new System.Drawing.Size(178, 29);
             this.dtpT.TabIndex = 22;
@@ -89,7 +89,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(691, 25);
+            this.label4.Location = new System.Drawing.Point(637, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 21);
             this.label4.TabIndex = 21;
@@ -99,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(361, 25);
+            this.label3.Location = new System.Drawing.Point(341, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 21);
             this.label3.TabIndex = 20;
@@ -109,7 +109,7 @@
             // 
             this.cboC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboC.FormattingEnabled = true;
-            this.cboC.Location = new System.Drawing.Point(99, 22);
+            this.cboC.Location = new System.Drawing.Point(85, 19);
             this.cboC.Name = "cboC";
             this.cboC.Size = new System.Drawing.Size(224, 29);
             this.cboC.TabIndex = 19;
@@ -118,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 25);
+            this.label2.Location = new System.Drawing.Point(8, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 0;
@@ -126,6 +126,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.btnAgregarP);
             this.panel2.Controls.Add(this.cboActualiza);
@@ -139,18 +140,43 @@
             this.panel2.Controls.Add(this.dvgBP);
             this.panel2.Location = new System.Drawing.Point(56, 125);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(967, 373);
+            this.panel2.Size = new System.Drawing.Size(967, 389);
             this.panel2.TabIndex = 1;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(868, 356);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(96, 30);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "Volver";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(497, 288);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(133, 39);
+            this.btnRegistrar.TabIndex = 32;
+            this.btnRegistrar.Text = "Registrar Venta";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnAgregarP
             // 
+            this.btnAgregarP.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnAgregarP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarP.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAgregarP.Location = new System.Drawing.Point(315, 248);
             this.btnAgregarP.Name = "btnAgregarP";
             this.btnAgregarP.Size = new System.Drawing.Size(128, 39);
             this.btnAgregarP.TabIndex = 31;
             this.btnAgregarP.Text = "Agregar Detalle";
-            this.btnAgregarP.UseVisualStyleBackColor = true;
+            this.btnAgregarP.UseVisualStyleBackColor = false;
             this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
             // 
             // cboActualiza
@@ -161,6 +187,7 @@
             this.cboActualiza.Name = "cboActualiza";
             this.cboActualiza.Size = new System.Drawing.Size(255, 29);
             this.cboActualiza.TabIndex = 24;
+            this.cboActualiza.SelectedIndexChanged += new System.EventHandler(this.cboActualiza_SelectedIndexChanged);
             // 
             // chkNoA
             // 
@@ -198,7 +225,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 329);
+            this.label5.Location = new System.Drawing.Point(57, 338);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 27;
@@ -206,28 +233,31 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(757, 288);
+            this.button4.Location = new System.Drawing.Point(806, 288);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(129, 39);
             this.button4.TabIndex = 26;
             this.button4.Text = "Eliminar Fila";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(574, 288);
+            this.button2.Location = new System.Drawing.Point(674, 288);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(96, 39);
             this.button2.TabIndex = 13;
             this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dvgDp
             // 
+            this.dvgDp.AllowUserToAddRows = false;
             this.dvgDp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgDp.Location = new System.Drawing.Point(497, 19);
             this.dvgDp.Name = "dvgDp";
@@ -237,6 +267,7 @@
             // 
             // dvgBP
             // 
+            this.dvgBP.AllowUserToAddRows = false;
             this.dvgBP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgBP.Location = new System.Drawing.Point(52, 54);
             this.dvgBP.Name = "dvgBP";
@@ -254,38 +285,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "PUNTO DISTRIBUICION EMMANUEL";
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(927, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 30);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Volver";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(310, 320);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(133, 39);
-            this.btnRegistrar.TabIndex = 32;
-            this.btnRegistrar.Text = "Registrar Venta";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // FrmRegistrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 526);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(1080, 526);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmRegistrarVenta";
             this.Text = "FrmRegistrarVenta";
             this.Load += new System.EventHandler(this.FrmRegistrarVenta_Load);

@@ -13,6 +13,20 @@ namespace PROYECTONEW.CapaDatos
 {
     public class ProductoDAL
     {
+        public static DataTable Listar()
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection con = new SqlConnection(Conexion.Cadena))
+            {
+                string sql = @"SELECT Id, Nombre, Precio, NumeroSerie, Stock, Id_EstadoActual FROM Producto where Id_EstadoActual =1";
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    con.Open();
+                    new SqlDataAdapter(cmd).Fill(data);
+                }
+            }
+            return data;
+        }
         public static int Insertar(Producto p)
         {
             using (SqlConnection con = new SqlConnection(Conexion.Cadena))

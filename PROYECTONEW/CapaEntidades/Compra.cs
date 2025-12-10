@@ -12,6 +12,6 @@ namespace PROYECTONEW.CapaEntidades
         public decimal TotalCompra { get; set; }
         public DateTime Fecha { get; set; }
         public int Id_Empresa { get; set; }
-        public int Id_Usuario { get; set; }
+        
     }
 }

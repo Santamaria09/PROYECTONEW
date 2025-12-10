@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTONEW.CapaNegocio
 {
-    internal class UsuarioBLL
+    public class UsuarioBLL
     {
         public static List<Usuario> Listar()
         {
@@ -17,12 +17,21 @@ namespace PROYECTONEW.CapaNegocio
         public static Usuario Obtener(int id)
         {
             // Busca el usuario en la lista de todos los usuarios
-            return UsuarioDAL.Listar().FirstOrDefault(u => u.IdUsuario == id);
+            return UsuarioDAL.Listar().FirstOrDefault(u => u.Id == id);
         }
 
         public static bool Eliminar(int id)
         {
             return UsuarioDAL.Eliminar(id);
+        }
+
+        public static bool CambiarClave(int id, string claveNueva)
+        {
+            if (string.IsNullOrWhiteSpace(claveNueva))
+                throw new ArgumentException("La nueva contraseña no puede estar vacía.");
+
+            string hash = Seguridad.Hash_SHA256(claveNueva);
+            return UsuarioDAL.CambiarClave(id, hash);
         }
 
         public static Usuario Login(string usuario, string clave)
@@ -34,27 +43,19 @@ namespace PROYECTONEW.CapaNegocio
             return UsuarioDAL.Login(usuario, hash);
         }
 
-       // public static int Insertar(string nombreUsuario, string clave, string rol)
-       // {
-           // if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(clave))
-               // throw new ArgumentException("Usuario y contraseña requeridos.");
 
-          //  string hash = Seguridad.Hash_SHA256(clave);
-           // return UsuarioDAL.Insertar(nombreUsuario.Trim(), hash, rol);
-       // }
-
-        public static bool Actualizar(int id, string nombreUsuario, string rol, bool estado)
+        public static int Insertar(string nombreUsuario, string clave, int idRol)
         {
-            return UsuarioDAL.Actualizar(id, nombreUsuario.Trim(), rol, estado);
+            if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(clave))
+                throw new ArgumentException("Usuario y contraseña requeridos.");
+
+            string hash = Seguridad.Hash_SHA256(clave);
+            return UsuarioDAL.Insertar(nombreUsuario.Trim(), hash, idRol);
         }
 
-        public static bool CambiarClave(int id, string claveNueva)
+        public static bool Actualizar(int id, string nombreUsuario, int idRol, bool estado)
         {
-            if (string.IsNullOrWhiteSpace(claveNueva))
-                throw new ArgumentException("La nueva contraseña no puede estar vacía.");
-
-            string hash = Seguridad.Hash_SHA256(claveNueva);
-            return UsuarioDAL.CambiarClave(id, hash);
+            return UsuarioDAL.Actualizar(id, nombreUsuario.Trim(), idRol, estado);
         }
 
 

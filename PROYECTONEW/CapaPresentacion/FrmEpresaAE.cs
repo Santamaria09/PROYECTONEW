@@ -88,5 +88,10 @@ namespace PROYECTONEW.CapaPresentacion
                 MessageBox.Show("Ocurrio un error inesperado:\n" + ex.Message, "Error general", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnVC_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

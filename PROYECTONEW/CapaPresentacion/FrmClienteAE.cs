@@ -83,5 +83,10 @@ namespace PROYECTONEW.CapaPresentacion
             }
 
         }
+
+        private void btnCC_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

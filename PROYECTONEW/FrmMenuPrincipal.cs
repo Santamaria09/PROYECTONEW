@@ -53,6 +53,18 @@ namespace PROYECTONEW
             frm.ShowDialog();
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmGesUsuario frm = new FrmGesUsuario();
+            frm.Show();
+        }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            FrmProductos frm = new FrmProductos();
+            frm.Show();
+        }
+
         // private void Form1_Load(object sender, EventArgs e)
         // {
         //lblUsuario.Text = $"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Rol}";

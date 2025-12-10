@@ -120,6 +120,7 @@
             this.btnGE.TabIndex = 23;
             this.btnGE.Text = "Cancelar";
             this.btnGE.UseVisualStyleBackColor = true;
+            this.btnGE.Click += new System.EventHandler(this.btnGE_Click);
             // 
             // btnE
             // 

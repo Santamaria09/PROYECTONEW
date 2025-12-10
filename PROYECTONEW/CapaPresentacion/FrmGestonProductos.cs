@@ -155,5 +155,10 @@ namespace PROYECTONEW.CapaPresentacion
         {
             Close();
         }
+
+        private void dvgGestionp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

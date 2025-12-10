@@ -42,7 +42,16 @@ namespace PROYECTONEW.CapaNegocio
 
 
                 //Subtotal
-                if (d.SubTotal != d.Cantidad * d.PrecioUnitario)
+                decimal PrecioFinal = d.PrecioUnitario;
+                if (d.EsSubsidio)
+                {
+                    PrecioFinal -= 12;
+                }
+
+                decimal SubTotal = d.Cantidad * PrecioFinal;
+
+                if (SubTotal != d.SubTotal)
+
                     return new Operaciones { Exito = false, Mensaje = $"SubTotal incorrecto para el produto ID{d.Id_Producto}" };
 
                 //Validar stock

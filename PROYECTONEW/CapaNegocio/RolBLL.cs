@@ -10,10 +10,29 @@ namespace PROYECTONEW.CapaNegocio
 {
     public class RolBLL
     {
-        public static List<Rol> ListarRol()
+        // LISTAR
+        // LISTAR ROLES
+        public static List<Rol> Listar()
         {
-            return RolDAL.ListarRol();
+            return RolDAL.Listar(); // Usar la capa de datos de roles
+        }
 
+        // INSERTAR ROL
+        public static int Insertar(string nombreRol)
+        {
+            return RolDAL.Insertar(nombreRol);
+        }
+
+        // ACTUALIZAR ROL
+        public static bool Actualizar(int id, string nombreRol)
+        {
+            return RolDAL.Actualizar(id, nombreRol);
+        }
+
+        // ELIMINAR ROL
+        public static bool Eliminar(int id)
+        {
+            return RolDAL.Eliminar(id);
         }
     }
 }

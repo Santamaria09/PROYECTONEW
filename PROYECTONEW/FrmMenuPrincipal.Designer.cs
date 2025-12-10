@@ -192,6 +192,7 @@
             this.btnCompra.Text = "Agregar";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCompra.UseVisualStyleBackColor = true;
+            this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
             // 
             // pictureBox4
             // 
@@ -275,6 +276,7 @@
             this.btnUsuarios.Text = "    USUARIOS";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // pictureBox6
             // 

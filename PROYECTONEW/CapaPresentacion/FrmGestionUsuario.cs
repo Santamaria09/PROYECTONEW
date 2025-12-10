@@ -41,7 +41,7 @@ namespace PROYECTONEW.CapaPresentacion
                     return;
                 }
 
-                SesionActual.IdUsuario = u.IdUsuario;
+                SesionActual.Id = u.Id;
                 SesionActual.NombreUsuario = u.NombreUsuario;
                // SesionActual.Rol = u.Rol;
 

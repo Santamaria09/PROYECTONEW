@@ -61,6 +61,7 @@
             this.dvgGestionp.Size = new System.Drawing.Size(440, 322);
             this.dvgGestionp.TabIndex = 12;
             this.dvgGestionp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgGestionp_CellClick);
+            this.dvgGestionp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgGestionp_CellContentClick);
             // 
             // btnVv
             // 
@@ -281,7 +282,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVv);
             this.Controls.Add(this.dvgGestionp);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmGestonProductos";
             this.Text = "FrmGestonProductos";
             this.Load += new System.EventHandler(this.FrmGestonProductos_Load);

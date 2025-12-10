@@ -44,5 +44,11 @@ namespace PROYECTONEW.CapaPresentacion
             MessageBox.Show("La empresa ha sido eliminada correctamente", "Operacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
+
+        private void btnGE_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
     }
 }

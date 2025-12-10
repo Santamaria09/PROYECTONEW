@@ -120,6 +120,7 @@
             this.btnVC.TabIndex = 20;
             this.btnVC.Text = "Volver";
             this.btnVC.UseVisualStyleBackColor = true;
+            this.btnVC.Click += new System.EventHandler(this.btnVC_Click);
             // 
             // btnGE
             // 

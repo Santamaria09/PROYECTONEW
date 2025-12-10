@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\ClientesDAL.cs" />
+    <Compile Include="CapaDatos\CompraDAL.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaDatos\EmpresaDAL.cs" />
     <Compile Include="CapaDatos\EstadoDAL.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="CapaEntidades\SesionActual.cs" />
     <Compile Include="CapaEntidades\Usuario.cs" />
     <Compile Include="CapaEntidades\Validaciones.cs" />
+    <Compile Include="CapaNegocio\CompraBLL.cs" />
     <Compile Include="CapaNegocio\EmpresaBLL.cs" />
     <Compile Include="CapaEntidades\Venta.cs" />
     <Compile Include="CapaEntidades\VentaItem.cs" />
@@ -77,6 +79,12 @@
     <Compile Include="CapaNegocio\RolBLL.cs" />
     <Compile Include="CapaNegocio\UsuarioBLL.cs" />
     <Compile Include="CapaNegocio\VentaBLL.cs" />
+    <Compile Include="CapaPresentacion\FrmActualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmActualizarUsuario.Designer.cs">
+      <DependentUpon>FrmActualizarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\FrmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +165,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapaPresentacion\FrmActualizarUsuario.resx">
+      <DependentUpon>FrmActualizarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmCambiarContraseña.resx">
       <DependentUpon>FrmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>

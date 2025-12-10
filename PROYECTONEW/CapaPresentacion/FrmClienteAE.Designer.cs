@@ -79,6 +79,7 @@
             this.btnCC.TabIndex = 6;
             this.btnCC.Text = "Cancelar";
             this.btnCC.UseVisualStyleBackColor = true;
+            this.btnCC.Click += new System.EventHandler(this.btnCC_Click);
             // 
             // txtDC
             // 
