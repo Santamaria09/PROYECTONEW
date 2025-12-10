@@ -14,8 +14,10 @@ namespace PROYECTONEW.CapaPresentacion
     public partial class FrmGesUsuario : Form
     {
         UsuarioBLL bll= new UsuarioBLL();
+
         int Id = 0;
-        string modo = "Nuevo";
+       
+        
 
         public FrmGesUsuario()
         {
@@ -47,6 +49,7 @@ namespace PROYECTONEW.CapaPresentacion
 
         private void CargarUsuarios()
         {
+
             dvgUsuarios.DataSource = UsuarioBLL.Listar()
                 .Select(u => new
                 {
@@ -77,9 +80,9 @@ namespace PROYECTONEW.CapaPresentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmRegistrarUsuario frm = new FrmRegistrarUsuario();
-            modo = "Nuevo";
+            frm.modo = "Nuevo";
             Id = 0;
-            frm.Show();
+            frm.ShowDialog();
             CargarUsuarios();
 
         }
@@ -92,17 +95,17 @@ namespace PROYECTONEW.CapaPresentacion
                 return;
             }
             FrmRegistrarUsuario frm = new FrmRegistrarUsuario();
-            modo = "Editar";
-            Id = Id;
-            frm.Show();
+            frm.modo = "Editar";
             
 
             // Obtener usuario seleccionado
-             
+            frm.Id = Convert.ToInt32(dvgUsuarios.SelectedRows[0].Cells["Id"].Value);
             frm.NombreUsuario = dvgUsuarios.SelectedRows[0].Cells["NombreUsuario"].Value.ToString();
-            frm.Id_Rol = Convert.ToInt32(dvgUsuarios.SelectedRows[0].Cells["I_Rol"].Value);
+            frm.Id_Rol = Convert.ToInt32(dvgUsuarios.SelectedRows[0].Cells["Rol"].Value);
             frm.Estado = dvgUsuarios.SelectedRows[0].Cells["Estado"].Value.ToString() == "Activo";
-
+            frm.ShowDialog();
+            CargarUsuarios();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

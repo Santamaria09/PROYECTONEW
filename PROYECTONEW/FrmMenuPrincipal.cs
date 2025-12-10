@@ -56,12 +56,18 @@ namespace PROYECTONEW
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             FrmGesUsuario frm = new FrmGesUsuario();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnCompra_Click(object sender, EventArgs e)
         {
             FrmProductos frm = new FrmProductos();
+            frm.ShowDialog();
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            FrmCambiarContraseña frm = new FrmCambiarContraseña();
             frm.Show();
         }
 

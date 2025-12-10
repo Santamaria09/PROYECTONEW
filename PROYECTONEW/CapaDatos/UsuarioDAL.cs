@@ -49,8 +49,7 @@ namespace PROYECTONEW.CapaDatos
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(
-                    "SELECT Id, NombreUsuario, Estado, Id_Rol" +
-                    "FROM Usuario", con))
+                    "SELECT Id, NombreUsuario, Estado, Id_Rol FROM Usuario", con))
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
@@ -89,7 +88,7 @@ namespace PROYECTONEW.CapaDatos
         }
 
         // Actualizar (no actualiza clave)
-        public static bool Actualizar(int id, string nombreUsuario, int idRol, bool estado)
+        public static bool Actualizar(int Id, string nombreUsuario, int idRol, bool estado)
         {
             using (SqlConnection con = new SqlConnection(Conexion.Cadena))
             {
@@ -100,7 +99,7 @@ namespace PROYECTONEW.CapaDatos
                     cmd.Parameters.AddWithValue("@u", nombreUsuario);
                     cmd.Parameters.AddWithValue("@r", idRol);
                     cmd.Parameters.AddWithValue("@e", estado);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", Id);
 
                     return cmd.ExecuteNonQuery() > 0;
                 }

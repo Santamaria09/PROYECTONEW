@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.check = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -111,18 +111,18 @@
             this.txtClave.Size = new System.Drawing.Size(191, 29);
             this.txtClave.TabIndex = 7;
             // 
-            // checkBox1
+            // check
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Black;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.checkBox1.Location = new System.Drawing.Point(331, 298);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 25);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Activo";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.check.AutoSize = true;
+            this.check.BackColor = System.Drawing.Color.Black;
+            this.check.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.check.Location = new System.Drawing.Point(331, 298);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(80, 25);
+            this.check.TabIndex = 8;
+            this.check.Text = "Activo";
+            this.check.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -189,7 +189,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label5);
@@ -219,7 +219,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox check;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
