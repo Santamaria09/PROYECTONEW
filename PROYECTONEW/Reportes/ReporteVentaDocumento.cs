@@ -10,7 +10,7 @@ using System.Data;
 
 namespace PROYECTONEW.Reportes
 {
-    public class ReporteVentaDocumento
+    public class ReporteVentaDocumento : IDocument
     {
         private readonly ReporteVentasModel Modelo;
         private readonly string RutaLogo = "\"C:\\Users\\MINEDUCYT\\Downloads\\ChatGPT Image 8 dic 2025, 10_25_54 a.m..png\""; // Cambia por la ruta real de tu logo

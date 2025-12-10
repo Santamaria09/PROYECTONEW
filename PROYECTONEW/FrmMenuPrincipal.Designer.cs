@@ -32,12 +32,14 @@
             this.btnGCLIENTES = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnProductos = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -46,10 +48,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -111,6 +111,20 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ventas";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::PROYECTONEW.Properties.Resources.comprobado;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(118, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 47);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "REPORTE\r\n VENTA";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVentas
             // 
@@ -183,6 +197,19 @@
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Compras";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::PROYECTONEW.Properties.Resources.comprobado;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(120, 75);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 47);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "REPORTE\r\n COMPRA";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnCompra
             // 
@@ -267,6 +294,7 @@
             this.btnCambiarContraseña.Text = "   CAMBIAR\r\n  CONTRASEÑA";
             this.btnCambiarContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCambiarContraseña.UseVisualStyleBackColor = true;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click_1);
             // 
             // btnUsuarios
             // 
@@ -282,15 +310,6 @@
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(36, 34);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
-            this.lblUsuario.TabIndex = 8;
-            this.lblUsuario.Text = "label2";
-            // 
             // pictureBox6
             // 
             this.pictureBox6.ErrorImage = null;
@@ -302,31 +321,14 @@
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // button1
+            // lblUsuario
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::PROYECTONEW.Properties.Resources.comprobado;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(118, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 47);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "REPORTE\r\n VENTA";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::PROYECTONEW.Properties.Resources.comprobado;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(120, 75);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 47);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "REPORTE\r\n COMPRA";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(36, 34);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 8;
+            this.lblUsuario.Text = "label2";
             // 
             // FrmMenuPrincipal
             // 
@@ -342,6 +344,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmMenuPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);

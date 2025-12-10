@@ -18,7 +18,7 @@ namespace PROYECTONEW
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //FrmGestonProductos
-            Application.Run(new FrmMenuPrincipal());
+            Application.Run(new FrmIniciarSesion());
         }
     }
 }

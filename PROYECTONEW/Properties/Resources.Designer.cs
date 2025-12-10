@@ -103,6 +103,16 @@ namespace PROYECTONEW.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_8_dic_2025__10_25_54_a_m_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 8 dic 2025, 10_25_54 a.m.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clavo {
             get {
                 object obj = ResourceManager.GetObject("clavo", resourceCulture);

@@ -72,12 +72,12 @@ namespace PROYECTONEW.CapaPresentacion
                 Id = Convert.ToInt32(dvgGestionp.Rows[e.RowIndex].Cells["Id"].Value);
                 txtNproducto.Text = dvgGestionp.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
                 txtPproducto.Text = dvgGestionp.Rows[e.RowIndex].Cells["Precio"].Value.ToString();
-                txtSproducto.Text = dvgGestionp.Rows[e.RowIndex].Cells["NumeroSerie"].Value.ToString();
+               // txtSproducto.Text = dvgGestionp.Rows[e.RowIndex].Cells["NumeroSerie"].Value.ToString();
                 txtstock.Text = dvgGestionp.Rows[e.RowIndex].Cells["Stock"].Value.ToString();
 
-                cboPeso.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["Id_UnidadPeso"].Value;
-                cboEmpresa.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["Id_Empresa"].Value;
-                cboEstado.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["Id_EstadoActual"].Value;
+                cboPeso.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["UnidadPeso"].Value;
+                cboEmpresa.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["Empresa"].Value;
+                cboEstado.SelectedValue = dvgGestionp.Rows[e.RowIndex].Cells["EstadoActual"].Value;
             }
         }
 

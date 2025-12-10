@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtContraseñaActual = new System.Windows.Forms.TextBox();
             this.txtConfirmarContraseña = new System.Windows.Forms.TextBox();
             this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
@@ -49,7 +48,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(123, 38);
+            this.label1.Location = new System.Drawing.Point(123, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(293, 32);
             this.label1.TabIndex = 1;
@@ -61,7 +60,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 176);
+            this.label2.Location = new System.Drawing.Point(54, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 25);
             this.label2.TabIndex = 2;
@@ -73,7 +72,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(54, 249);
+            this.label3.Location = new System.Drawing.Point(53, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 25);
             this.label3.TabIndex = 3;
@@ -91,22 +90,10 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Confirmar contraseña:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.label5.Location = new System.Drawing.Point(232, 94);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label";
-            // 
             // txtContraseñaActual
             // 
             this.txtContraseñaActual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtContraseñaActual.Location = new System.Drawing.Point(278, 176);
+            this.txtContraseñaActual.Location = new System.Drawing.Point(278, 135);
             this.txtContraseñaActual.Name = "txtContraseñaActual";
             this.txtContraseñaActual.Size = new System.Drawing.Size(209, 29);
             this.txtContraseñaActual.TabIndex = 6;
@@ -122,7 +109,8 @@
             // txtNuevaContraseña
             // 
             this.txtNuevaContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.txtNuevaContraseña.Location = new System.Drawing.Point(278, 249);
+            this.txtNuevaContraseña.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(278, 233);
             this.txtNuevaContraseña.Name = "txtNuevaContraseña";
             this.txtNuevaContraseña.Size = new System.Drawing.Size(209, 29);
             this.txtNuevaContraseña.TabIndex = 8;
@@ -170,7 +158,6 @@
             this.Controls.Add(this.txtNuevaContraseña);
             this.Controls.Add(this.txtConfirmarContraseña);
             this.Controls.Add(this.txtContraseñaActual);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -194,7 +181,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtContraseñaActual;
         private System.Windows.Forms.TextBox txtConfirmarContraseña;
         private System.Windows.Forms.TextBox txtNuevaContraseña;

@@ -71,9 +71,26 @@ namespace PROYECTONEW
             frm.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmReportes frm = new FrmReportes();
+            frm.ShowDialog();
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = $"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Id_Rol}";
+
+        }
+
+        private void btnCambiarContraseña_Click_1(object sender, EventArgs e)
+        {
+            FrmCambiarContraseña frm = new FrmCambiarContraseña();
+            frm.ShowDialog();
+        }
+
         // private void Form1_Load(object sender, EventArgs e)
         // {
-        //lblUsuario.Text = $"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Rol}";
 
         /// Control básico por rol
         //Con este codigo deshabilitamos un botón de prueba para el usuario cajero, por ejemplo que no pueda Registrar Cliente(ojo esto es solo prueba)

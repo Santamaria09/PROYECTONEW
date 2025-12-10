@@ -17,23 +17,18 @@ namespace PROYECTONEW.CapaPresentacion
 {
     public partial class FrmCambiarContraseña : Form
     {
+        private string usuarioActual;
+        private int Id;
+
+
         public FrmCambiarContraseña()
         {
             InitializeComponent();
+            
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
-           
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmCambiarContraseña_Load(object sender, EventArgs e)
         {
             try
             {
@@ -63,11 +58,26 @@ namespace PROYECTONEW.CapaPresentacion
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCambiarContraseña_Load(object sender, EventArgs e)
+        {
+            txtContraseñaActual.Clear();
+            txtNuevaContraseña.Clear();
+            txtConfirmarContraseña.Clear();
+
+        }
         // Método privado para generar hash temporal y verificar (evita duplicar Seguridad en UI)
         private string PruebaHash(string pass)
         {
             return Seguridad.Hash_SHA256(pass);
-
         }
+        // Método privado para generar hash temporal y verificar (evita duplicar Seguridad en UI)
+
     }
 }

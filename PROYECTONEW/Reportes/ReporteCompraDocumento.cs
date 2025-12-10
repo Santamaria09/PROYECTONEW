@@ -13,10 +13,10 @@ namespace PROYECTONEW.Reportes
 {
     public class ReporteCompraDocumento : IDocument
     {
-        private readonly ReporteComprasModel Modelo;
+        private readonly ReportesCompraModel Modelo;
         private readonly string RutaLogo = "\"C:\\Users\\MINEDUCYT\\Downloads\\ChatGPT Image 8 dic 2025, 10_25_54 a.m..png\""; // Cambiar ruta si quieres
 
-        public ReporteCompraDocumento(ReporteComprasModel modelo)
+        public ReporteCompraDocumento(ReportesCompraModel modelo)
         {
             Modelo = modelo;
         }

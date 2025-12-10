@@ -17,8 +17,7 @@ namespace PROYECTONEW.CapaDatos
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(
-                    "SELECT Id, NombreUsuario, Estado, Id_Rol " +
-                    "FROM Usuario WHERE NombreUsuario=@u AND ClaveHash=@h AND Estado=1", con))
+                    "SELECT Id, NombreUsuario, Estado, Id_Rol FROM Usuario WHERE NombreUsuario=@u AND ClaveHash=@h AND Estado=1", con))
                 {
                     cmd.Parameters.AddWithValue("@u", nombreUsuario);
                     cmd.Parameters.AddWithValue("@h", claveHash);
@@ -74,8 +73,7 @@ namespace PROYECTONEW.CapaDatos
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO Usuario (NombreUsuario, ClaveHash, Estado, Fecha, Id_Rol) " +
-                    "VALUES (@u, @h, 1, GETDATE(), @r); SELECT SCOPE_IDENTITY();", con))
+                    "INSERT INTO Usuario (NombreUsuario, ClaveHash, Estado, Fecha, Id_Rol) VALUES (@u, @h, 1, GETDATE(), @r); SELECT SCOPE_IDENTITY();", con))
                 {
                     cmd.Parameters.AddWithValue("@u", nombreUsuario);
                     cmd.Parameters.AddWithValue("@h", claveHash);

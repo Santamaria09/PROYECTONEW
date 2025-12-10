@@ -26,7 +26,7 @@ namespace PROYECTONEW.CapaDatos
                     cmd.Parameters.AddWithValue("@FechaInicio", fechaInicio.Date);
                     cmd.Parameters.AddWithValue("@FechaFin", fechaFin.Date);
 
-                    conn.Open();
+                    con.Open();
 
                     // Ejecutamos el lector y cargamos el DataTable
                     using (SqlDataReader dr = cmd.ExecuteReader())
