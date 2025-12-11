@@ -31,10 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboT = new System.Windows.Forms.ComboBox();
             this.dtpT = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.cboC = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -42,13 +39,16 @@
             this.cboActualiza = new System.Windows.Forms.ComboBox();
             this.chkNoA = new System.Windows.Forms.CheckBox();
             this.chkAplica = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dvgDp = new System.Windows.Forms.DataGridView();
             this.dvgBP = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDp)).BeginInit();
@@ -72,7 +72,7 @@
             // 
             this.cboT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboT.FormattingEnabled = true;
-            this.cboT.Location = new System.Drawing.Point(461, 19);
+            this.cboT.Location = new System.Drawing.Point(497, 19);
             this.cboT.Name = "cboT";
             this.cboT.Size = new System.Drawing.Size(143, 29);
             this.cboT.TabIndex = 23;
@@ -85,54 +85,24 @@
             this.dtpT.Size = new System.Drawing.Size(178, 29);
             this.dtpT.TabIndex = 22;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(637, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 21);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "FECHA:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(341, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 21);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "TIPO DE PAGO:";
-            // 
             // cboC
             // 
             this.cboC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboC.FormattingEnabled = true;
-            this.cboC.Location = new System.Drawing.Point(85, 19);
+            this.cboC.Location = new System.Drawing.Point(107, 19);
             this.cboC.Name = "cboC";
             this.cboC.Size = new System.Drawing.Size(224, 29);
             this.cboC.TabIndex = 19;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "CLIENTE:";
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.btnAgregarP);
             this.panel2.Controls.Add(this.cboActualiza);
             this.panel2.Controls.Add(this.chkNoA);
             this.panel2.Controls.Add(this.chkAplica);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button2);
@@ -211,16 +181,6 @@
             this.chkAplica.Text = "Si, Aplica";
             this.chkAplica.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 21);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "FILTRAR:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -285,6 +245,58 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "PUNTO DISTRIBUICION EMMANUEL";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::PROYECTONEW.Properties.Resources.gestion_de_proyectos;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(670, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "    FECHA:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::PROYECTONEW.Properties.Resources.social;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(361, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "    TIPO DE PAGO:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::PROYECTONEW.Properties.Resources.nueva_cuenta;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(24, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "    CLIENTE:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = global::PROYECTONEW.Properties.Resources.lupa;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(48, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 21);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "    FILTRAR:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmRegistrarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,11 +337,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chkNoA;
         private System.Windows.Forms.CheckBox chkAplica;
         private System.Windows.Forms.ComboBox cboActualiza;
         private System.Windows.Forms.Button btnAgregarP;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label label6;
     }
 }

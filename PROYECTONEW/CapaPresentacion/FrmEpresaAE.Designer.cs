@@ -104,12 +104,15 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(194, 36);
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Image = global::PROYECTONEW.Properties.Resources.comercio;
+            this.label.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label.Location = new System.Drawing.Point(182, 43);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(78, 21);
+            this.label.Size = new System.Drawing.Size(123, 25);
             this.label.TabIndex = 9;
-            this.label.Text = "EMPRESA";
+            this.label.Text = "      EMPRESA";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnVC
             // 

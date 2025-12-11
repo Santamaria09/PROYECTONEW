@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dvgEmpresa = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtBE = new System.Windows.Forms.TextBox();
             this.btnAE = new System.Windows.Forms.Button();
             this.btnEE = new System.Windows.Forms.Button();
             this.btnEM = new System.Windows.Forms.Button();
             this.btnVC = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,36 +43,16 @@
             // 
             this.dvgEmpresa.AllowUserToAddRows = false;
             this.dvgEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgEmpresa.Location = new System.Drawing.Point(88, 115);
+            this.dvgEmpresa.Location = new System.Drawing.Point(105, 114);
             this.dvgEmpresa.Name = "dvgEmpresa";
-            this.dvgEmpresa.Size = new System.Drawing.Size(464, 322);
+            this.dvgEmpresa.Size = new System.Drawing.Size(434, 322);
             this.dvgEmpresa.TabIndex = 12;
             this.dvgEmpresa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpresa_CellClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(264, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 21);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "GESTION EMPRESAS";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 21);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "FILTRAR:";
             // 
             // txtBE
             // 
             this.txtBE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBE.Location = new System.Drawing.Point(209, 68);
+            this.txtBE.Location = new System.Drawing.Point(227, 68);
             this.txtBE.Name = "txtBE";
             this.txtBE.Size = new System.Drawing.Size(283, 29);
             this.txtBE.TabIndex = 15;
@@ -121,6 +101,31 @@
             this.btnVC.Text = "Volver";
             this.btnVC.UseVisualStyleBackColor = true;
             this.btnVC.Click += new System.EventHandler(this.btnVC_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::PROYECTONEW.Properties.Resources.analitica;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(115, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 21);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "    FILTRAR:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::PROYECTONEW.Properties.Resources.gestion_de_instalaciones__1_;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(204, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 25);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "      GESTION EMPRESAS";
             // 
             // FrmGestionEmpresas
             // 

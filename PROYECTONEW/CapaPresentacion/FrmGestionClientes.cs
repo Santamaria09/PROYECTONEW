@@ -16,7 +16,7 @@ namespace PROYECTONEW.CapaPresentacion
     {
         ClienteBLL bll = new ClienteBLL();
         int Id = 0;
-        string modo = "Nuevo";
+        
 
 
         public FrmGestionClientes()

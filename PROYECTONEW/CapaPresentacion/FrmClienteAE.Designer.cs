@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
             this.txtNC = new System.Windows.Forms.TextBox();
             this.btnGC = new System.Windows.Forms.Button();
             this.btnCC = new System.Windows.Forms.Button();
@@ -39,17 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(197, 28);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(68, 21);
-            this.label.TabIndex = 0;
-            this.label.Text = "CLIENTE";
             // 
             // txtNC
             // 
@@ -158,6 +148,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "     Teléfono:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Image = global::PROYECTONEW.Properties.Resources.satisfecho;
+            this.label.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label.Location = new System.Drawing.Point(176, 40);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(107, 25);
+            this.label.TabIndex = 0;
+            this.label.Text = "     CLIENTE";
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmClienteAE
             // 

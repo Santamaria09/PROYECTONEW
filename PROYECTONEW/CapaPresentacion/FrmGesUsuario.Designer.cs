@@ -141,10 +141,10 @@
             this.dvgUsuarios.AllowUserToAddRows = false;
             this.dvgUsuarios.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dvgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgUsuarios.Location = new System.Drawing.Point(54, 102);
+            this.dvgUsuarios.Location = new System.Drawing.Point(86, 87);
             this.dvgUsuarios.Name = "dvgUsuarios";
             this.dvgUsuarios.ReadOnly = true;
-            this.dvgUsuarios.Size = new System.Drawing.Size(575, 168);
+            this.dvgUsuarios.Size = new System.Drawing.Size(513, 192);
             this.dvgUsuarios.TabIndex = 2;
             this.dvgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dvgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);

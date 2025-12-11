@@ -15,7 +15,7 @@ namespace PROYECTONEW.CapaPresentacion
     {
         EmpresaBLL bll = new EmpresaBLL();
         int Id = 0;
-        string modo = "Nuevo";
+        
 
         public FrmGestionEmpresas()
         {

@@ -89,6 +89,20 @@ namespace PROYECTONEW
             frm.ShowDialog();
         }
 
+        private void btnSeccion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            // Crear una nueva instancia del formulario de inicio de sesión
+             FrmIniciarSesion frm = new FrmIniciarSesion();
+
+            // Mostrar el login
+            frm.ShowDialog();
+
+            // Cerrar este formulario después de mostrar el login
+            this.Close();
+        }
+
         // private void Form1_Load(object sender, EventArgs e)
         // {
 

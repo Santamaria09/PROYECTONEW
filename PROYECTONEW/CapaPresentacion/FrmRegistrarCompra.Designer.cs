@@ -33,7 +33,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.cboECompra = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpCompra = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.dvgCompra = new System.Windows.Forms.DataGridView();
@@ -44,6 +43,7 @@
             this.btnvolver = new System.Windows.Forms.Button();
             this.btnRegistrarC = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgComprad)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCompra)).BeginInit();
@@ -93,7 +93,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dtpCompra);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cboECompra);
@@ -101,16 +101,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(841, 74);
             this.panel1.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(427, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Fecha:";
             // 
             // dtpCompra
             // 
@@ -192,7 +182,7 @@
             // btnvolver
             // 
             this.btnvolver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnvolver.Location = new System.Drawing.Point(732, 365);
+            this.btnvolver.Location = new System.Drawing.Point(742, 365);
             this.btnvolver.Name = "btnvolver";
             this.btnvolver.Size = new System.Drawing.Size(96, 30);
             this.btnvolver.TabIndex = 26;
@@ -220,6 +210,19 @@
             this.label3.Size = new System.Drawing.Size(279, 21);
             this.label3.TabIndex = 27;
             this.label3.Text = "PUNTO DISTRIBUICION EMMANUEL";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::PROYECTONEW.Properties.Resources.gestion_de_proyectos;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(417, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 21);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "    FECHA:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmProductos
             // 
@@ -259,8 +262,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnvolver;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRegistrarC;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

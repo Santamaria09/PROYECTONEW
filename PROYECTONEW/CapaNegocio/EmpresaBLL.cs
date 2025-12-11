@@ -21,9 +21,9 @@ namespace PROYECTONEW.CapaNegocio
         public int Guardar( Empresa e)
         {
             if (string.IsNullOrWhiteSpace(e.Nombre))
-                throw new Exception("El nombre del Empresa es obligatorio");
+                throw new Exception("El nombre de la Empresa es obligatorio");
 
-            if (string.IsNullOrWhiteSpace(e.TelefonoEmpresa) || e.TelefonoEmpresa.Length != 8)
+            if (string.IsNullOrWhiteSpace(e.TelefonoEmpresa) || e.TelefonoEmpresa.Length != 9)
                 throw new Exception("El teléfono debe contener exactamente 8 dígitos.");
 
             if (e.Id == 0)
@@ -42,9 +42,10 @@ namespace PROYECTONEW.CapaNegocio
         }
         public bool Eliminar(int id)
         {
-            return dall.Eliminar(id);
+            
 
             MessageBox.Show("Registro eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return dall.Eliminar(id);
 
         }
         public DataTable Buscar(string filtro)

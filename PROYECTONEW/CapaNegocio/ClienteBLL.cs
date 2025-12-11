@@ -25,7 +25,7 @@ namespace PROYECTONEW.CapaNegocio
             if (string.IsNullOrWhiteSpace(c.Nombre))
                 throw new Exception("El Nombre del Cliente es obligatorio");
 
-            if (string.IsNullOrWhiteSpace(c.Telefono) || c.Telefono.Length != 8)
+            if (string.IsNullOrWhiteSpace(c.Telefono) || c.Telefono.Length != 9)
                 throw new Exception("El teléfono debe contener exactamente 8 dígitos.");
 
             if (c.Id == 0)
@@ -46,10 +46,10 @@ namespace PROYECTONEW.CapaNegocio
 
         public bool Eliminar(int Id)
         {
-            return dal.Eliminar(Id);
+            
 
             MessageBox.Show("Registro eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+            return dal.Eliminar(Id);
 
         }
 

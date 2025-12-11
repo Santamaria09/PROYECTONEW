@@ -14,7 +14,7 @@ namespace PROYECTONEW.Reportes
     public class ReporteCompraDocumento : IDocument
     {
         private readonly ReportesCompraModel Modelo;
-        private readonly string RutaLogo = "\"C:\\Users\\MINEDUCYT\\Downloads\\ChatGPT Image 8 dic 2025, 10_25_54 a.m..png\""; // Cambiar ruta si quieres
+        private readonly string RutaLogo = @"C:\Users\MINEDUCYT\Downloads\ChatGPT Image 8 dic 2025 10_25_54 a.m..png"; // Cambiar ruta si quieres
 
         public ReporteCompraDocumento(ReportesCompraModel modelo)
         {
@@ -38,7 +38,7 @@ namespace PROYECTONEW.Reportes
                     {
                         col.Item().Text("Punto de Distribución Emanuel").Bold().FontSize(20);
                         col.Item().Text("Reporte de Compras por Período").FontSize(14);
-                        col.Item().Text($"Desde {Modelo.Inicio:dd/MM/yyyy} — Hasta {Modelo.Fin:dd/MM/yyyy}").FontSize(11);
+                        col.Item().Text($"Desde {Modelo.Inicio:yyyy/MM/dd} — Hasta {Modelo.Fin:yyyy/MM/dd}").FontSize(11);
                     });
                 });
 
@@ -47,7 +47,7 @@ namespace PROYECTONEW.Reportes
                 page.Footer().AlignCenter().Text(txt =>
                 {
                     txt.Span("Generado el ").SemiBold();
-                    txt.Span(DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
+                    txt.Span(DateTime.Now.ToString("yyyy/MM/dd HH:mm"));
                     txt.Line(" — Sistema POS Punto de Distribución Emanuel");
                 });
             });

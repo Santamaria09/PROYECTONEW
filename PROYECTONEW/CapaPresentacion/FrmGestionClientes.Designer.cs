@@ -28,35 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnDC = new System.Windows.Forms.Button();
             this.btnAC = new System.Windows.Forms.Button();
             this.txtBC = new System.Windows.Forms.TextBox();
             this.btnEC = new System.Windows.Forms.Button();
             this.dvgCliente = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCliente)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FILTRAR:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(263, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "GESTION DE CLIENTES";
             // 
             // btnDC
             // 
@@ -111,18 +91,44 @@
             this.dvgCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCliente_CellClick);
             this.dvgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCliente_CellContentClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = global::PROYECTONEW.Properties.Resources.lista__1_;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(214, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(253, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "         GESTION DE CLIENTES";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = global::PROYECTONEW.Properties.Resources.analitica;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(110, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 21);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "    FILTRAR:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmGestionClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(714, 536);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dvgCliente);
             this.Controls.Add(this.btnEC);
             this.Controls.Add(this.txtBC);
             this.Controls.Add(this.btnAC);
             this.Controls.Add(this.btnDC);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FrmGestionClientes";
             this.Text = "FrmGestionClientes";
@@ -134,12 +140,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDC;
         private System.Windows.Forms.Button btnAC;
         private System.Windows.Forms.TextBox txtBC;
         private System.Windows.Forms.Button btnEC;
         private System.Windows.Forms.DataGridView dvgCliente;
+        private System.Windows.Forms.Label label1;
     }
 }
